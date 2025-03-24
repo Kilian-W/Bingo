@@ -13,13 +13,13 @@ public class BingoCard {
     //@Param X-coordinate, Y-coordinate, Value to assign
     public void setSpace(int X, int Y, int value) {
         spaces[X][Y] = new BingoSpace(value);
-        markedSpaces.add(new Coordinates(X, Y));
     }
 
     //Marks a space on the board as drawn
     //@param X-coordinate, Y-coordinate
     public void markSpace(int X, int Y) {
         spaces[X][Y].mark();
+        markedSpaces.add(new Coordinates(X, Y));
     }
 
     //Prints the card information to the console
