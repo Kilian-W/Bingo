@@ -11,9 +11,15 @@ public class BingoPattern {
                 Coordinates currentMarkedSpace = markedSpaces.get(j);
                 for(int k = 0; k < currentPattern.size(); k++) {
                     Coordinates currentCheckSpace = currentPattern.get(k);
-                    
+                    if(currentMarkedSpace.getX() == currentCheckSpace.getX() && currentMarkedSpace.getY() == currentCheckSpace.getY()){
+                        currentPattern.remove(k);
+                        if(currentPattern.isEmpty()) {
+                            return true;
+                        }
+                    }
                 }
             }
         }
+        return false;
     }
 }
