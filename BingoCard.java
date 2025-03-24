@@ -3,14 +3,17 @@
  * Author: Kilian Wilinski
  * Date: 2/18/2025
  */
+import java.util.ArrayList;
 
 public class BingoCard {
     private BingoSpace[][] spaces = new BingoSpace[5][5];
+    private ArrayList<Coordinates> markedSpaces = new ArrayList<Coordinates>();
 
     //Assigns a space on the board at the specified location with the specified value
     //@Param X-coordinate, Y-coordinate, Value to assign
     public void setSpace(int X, int Y, int value) {
         spaces[X][Y] = new BingoSpace(value);
+        markedSpaces.add(new Coordinates(X, Y));
     }
 
     //Marks a space on the board as drawn
