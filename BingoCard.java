@@ -15,6 +15,10 @@ public class BingoCard {
         spaces[X][Y] = new BingoSpace(value);
     }
 
+    public ArrayList<Coordinates> getMarkedSpaces() {
+        return markedSpaces;
+    }
+
     //Marks a space on the board as drawn
     //@param X-coordinate, Y-coordinate
     public void markSpace(int X, int Y) {

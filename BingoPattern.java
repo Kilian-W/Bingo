@@ -4,6 +4,9 @@ public class BingoPattern {
     protected ArrayList<ArrayList<Coordinates>> validPatterns;
 
     public boolean getBingo(BingoCard card) {
-        return true;
+        ArrayList<Coordinates> markedSpaces = card.getMarkedSpaces();
+        for(int i = 0; i < validPatterns.size(); i++) {
+
+        }
     }
 }
