@@ -10,10 +10,33 @@ public class RowPatternTest {
         caseOne.add(new Coordinates(0,2));
         caseOne.add(new Coordinates(0,3));
         caseOne.add(new Coordinates(0,4));
+        BingoCard testCardOne = new BingoCard();
+        testCardOne.setMarkedSpaces(caseOne);
 
         ArrayList<Coordinates> caseTwo = new ArrayList<Coordinates>();
+        caseTwo.add(new Coordinates(2,0));
+        caseTwo.add(new Coordinates(2,1));
+        caseTwo.add(new Coordinates(2,2));
+        caseTwo.add(new Coordinates(2,3));
+        caseTwo.add(new Coordinates(2,4));
+        BingoCard testCardTwo = new BingoCard();
+        testCardTwo.setMarkedSpaces(caseTwo);
+
         ArrayList<Coordinates> caseThree = new ArrayList<Coordinates>();
+        caseThree.add(new Coordinates(4,0));
+        caseThree.add(new Coordinates(4,1));
+        caseThree.add(new Coordinates(4,2));
+        caseThree.add(new Coordinates(4,3));
+        caseThree.add(new Coordinates(4,4));
+        BingoCard testCardThree = new BingoCard();
+        testCardThree.setMarkedSpaces(caseThree);
+
         ArrayList<Coordinates> caseFour = new ArrayList<Coordinates>();
+        caseFour.add(new Coordinates(0,0));
+        caseFour.add(new Coordinates(0,1));
+        caseFour.add(new Coordinates(0,2));
+        caseFour.add(new Coordinates(0,3));
+
 
         RowPattern bingoPattern = new RowPattern();
     }
