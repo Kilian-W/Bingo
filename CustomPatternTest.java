@@ -94,5 +94,32 @@ public class CustomPatternTest {
             e.printStackTrace();
             Assertions.fail("Test Three Expected To Fail");
         }
+
+        ArrayList<Coordinates> caseFour = new ArrayList<Coordinates>();
+        caseFour.add(new Coordinates(4, 0));
+        caseFour.add(new Coordinates(4, 1));
+        caseFour.add(new Coordinates(4, 2));
+        caseFour.add(new Coordinates(4, 3));
+        caseFour.add(new Coordinates(4, 4));
+        caseFour.add(new Coordinates(0, 0));
+        caseFour.add(new Coordinates(0, 1));
+        caseFour.add(new Coordinates(0, 2));
+        caseFour.add(new Coordinates(0, 3));
+        caseFour.add(new Coordinates(0, 4));
+        caseFour.add(new Coordinates(1, 0));
+        caseFour.add(new Coordinates(2, 0));
+        caseFour.add(new Coordinates(3, 0));
+        caseFour.add(new Coordinates(1, 4));
+        caseFour.add(new Coordinates(2, 4));
+        caseFour.add(new Coordinates(3, 4));
+        BingoCard testCardFour = new BingoCard();
+        testCardFour.setMarkedSpaces(caseFour);
+        boolean testFour = bingoPatternTwo.getBingo(testCardFour);
+        try {
+            Assertions.assertFalse(!testFour);
+        }catch(Exception e) {
+            e.printStackTrace();
+            Assertions.fail("Test Four Not Expected To Fail");
+        }
     }
 }
