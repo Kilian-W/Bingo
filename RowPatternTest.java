@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import java.util.ArrayList;
 
 public class RowPatternTest {
@@ -44,5 +45,14 @@ public class RowPatternTest {
         caseFour.add(new Coordinates(0,3));
         BingoCard testCardFour = new BingoCard();
         testCardFour.setMarkedSpaces(caseFour);
+        boolean testFour = bingoPattern.getBingo(testCardFour);
+
+        try {
+            Assertions.assertFalse(testOne);
+        }catch(Exception e) {
+            e.printStackTrace();
+            Assertions.fail("Test One Not Expected To Fail");
+        }
+        
     }
 }
