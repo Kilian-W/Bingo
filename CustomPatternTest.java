@@ -18,7 +18,16 @@ public class CustomPatternTest {
 
         CustomPattern bingoPatternTwo = new CustomPattern();
         ArrayList<Coordinates> patternTwo = new ArrayList<Coordinates>();
-        
+        patternTwo.add(new Coordinates(4, 0));
+        patternTwo.add(new Coordinates(4, 1));
+        patternTwo.add(new Coordinates(4, 2));
+        patternTwo.add(new Coordinates(4, 3));
+        patternTwo.add(new Coordinates(4, 4));
+        patternTwo.add(new Coordinates(3, 2));
+        patternTwo.add(new Coordinates(2, 2));
+        patternTwo.add(new Coordinates(1, 2));
+        patternTwo.add(new Coordinates(0, 2));
+
 
         ArrayList<Coordinates> caseOne = new ArrayList<Coordinates>();
         caseOne.add(new Coordinates(4,4));
