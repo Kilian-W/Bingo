@@ -53,6 +53,26 @@ public class RowPatternTest {
             e.printStackTrace();
             Assertions.fail("Test One Not Expected To Fail");
         }
+
+        try {
+            Assertions.assertFalse(testTwo);
+        }catch(Exception e) {
+            e.printStackTrace();
+            Assertions.fail("Test Two Not Expected To Fail");
+        }
+
+        try {
+            Assertions.assertFalse(testThree);
+        }catch(Exception e) {
+            e.printStackTrace();
+            Assertions.fail("Test Three Not Expected To Fail");
+        }
+
+        try {
+            Assertions.assertFalse(testFour);
+            Assertions.fail("Test Four Expected To Fail");
+        }catch(Exception e) {
+        }
         
     }
 }
