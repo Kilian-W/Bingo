@@ -21,7 +21,7 @@ public class BingoPattern {
                     }
                 }
             }
-            if(testList.size() == 5) {
+            if(testList.size() == currentPattern.size()) {
                 return true;
             }
         }
