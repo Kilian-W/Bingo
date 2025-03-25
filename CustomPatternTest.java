@@ -121,5 +121,23 @@ public class CustomPatternTest {
             e.printStackTrace();
             Assertions.fail("Test Four Not Expected To Fail");
         }
+
+        ArrayList<Coordinates> caseFive = new ArrayList<Coordinates>();
+        for(int i = 0; i < 5; i++) {
+            for(int j = 0; j < 5; j++) {
+                if(i != 0 && j != 4) {
+                    caseFive.add(new Coordinates(i, j));
+                }
+            }
+        }
+        BingoCard testCardFive = new BingoCard();
+        testCardFive.setMarkedSpaces(caseFive);
+        boolean testFive = bingoPatternTwo.getBingo(testCardFive);
+        try {
+            Assertions.assertFalse(testFive);
+        }catch(Exception e) {
+            e.printStackTrace();
+            Assertions.fail("Test Five Expected To Fail");
+        }
     }
 }
