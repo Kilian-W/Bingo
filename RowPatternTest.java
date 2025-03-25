@@ -4,6 +4,9 @@ import java.util.ArrayList;
 public class RowPatternTest {
     @Test
     void testGetBingo() {
+
+        RowPattern bingoPattern = new RowPattern();
+
         ArrayList<Coordinates> caseOne = new ArrayList<Coordinates>();
         caseOne.add(new Coordinates(0,0));
         caseOne.add(new Coordinates(0,1));
@@ -12,6 +15,7 @@ public class RowPatternTest {
         caseOne.add(new Coordinates(0,4));
         BingoCard testCardOne = new BingoCard();
         testCardOne.setMarkedSpaces(caseOne);
+        boolean testOne = bingoPattern.getBingo(testCardOne);
 
         ArrayList<Coordinates> caseTwo = new ArrayList<Coordinates>();
         caseTwo.add(new Coordinates(2,0));
@@ -21,6 +25,7 @@ public class RowPatternTest {
         caseTwo.add(new Coordinates(2,4));
         BingoCard testCardTwo = new BingoCard();
         testCardTwo.setMarkedSpaces(caseTwo);
+        boolean testTwo = bingoPattern.getBingo(testCardTwo);
 
         ArrayList<Coordinates> caseThree = new ArrayList<Coordinates>();
         caseThree.add(new Coordinates(4,0));
@@ -30,14 +35,14 @@ public class RowPatternTest {
         caseThree.add(new Coordinates(4,4));
         BingoCard testCardThree = new BingoCard();
         testCardThree.setMarkedSpaces(caseThree);
+        boolean testThree = bingoPattern.getBingo(testCardThree);
 
         ArrayList<Coordinates> caseFour = new ArrayList<Coordinates>();
         caseFour.add(new Coordinates(0,0));
         caseFour.add(new Coordinates(0,1));
         caseFour.add(new Coordinates(0,2));
         caseFour.add(new Coordinates(0,3));
-
-
-        RowPattern bingoPattern = new RowPattern();
+        BingoCard testCardFour = new BingoCard();
+        testCardFour.setMarkedSpaces(caseFour);
     }
 }
