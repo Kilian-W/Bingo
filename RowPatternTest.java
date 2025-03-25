@@ -48,21 +48,21 @@ public class RowPatternTest {
         boolean testFour = bingoPattern.getBingo(testCardFour);
 
         try {
-            Assertions.assertFalse(testOne);
+            Assertions.assertFalse(!testOne);
         }catch(Exception e) {
             e.printStackTrace();
             Assertions.fail("Test One Not Expected To Fail");
         }
 
         try {
-            Assertions.assertFalse(testTwo);
+            Assertions.assertFalse(!testTwo);
         }catch(Exception e) {
             e.printStackTrace();
             Assertions.fail("Test Two Not Expected To Fail");
         }
 
         try {
-            Assertions.assertFalse(testThree);
+            Assertions.assertFalse(!testThree);
         }catch(Exception e) {
             e.printStackTrace();
             Assertions.fail("Test Three Not Expected To Fail");
@@ -70,8 +70,8 @@ public class RowPatternTest {
 
         try {
             Assertions.assertFalse(testFour);
-            Assertions.fail("Test Four Expected To Fail");
         }catch(Exception e) {
+            Assertions.fail("Test Four Expected To Fail");
         }
         
     }
