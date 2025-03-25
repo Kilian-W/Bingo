@@ -23,10 +23,17 @@ public class CustomPatternTest {
         patternTwo.add(new Coordinates(4, 2));
         patternTwo.add(new Coordinates(4, 3));
         patternTwo.add(new Coordinates(4, 4));
-        patternTwo.add(new Coordinates(3, 2));
-        patternTwo.add(new Coordinates(2, 2));
-        patternTwo.add(new Coordinates(1, 2));
+        patternTwo.add(new Coordinates(0, 0));
+        patternTwo.add(new Coordinates(0, 1));
         patternTwo.add(new Coordinates(0, 2));
+        patternTwo.add(new Coordinates(0, 3));
+        patternTwo.add(new Coordinates(0, 4));
+        patternTwo.add(new Coordinates(1, 0));
+        patternTwo.add(new Coordinates(2, 0));
+        patternTwo.add(new Coordinates(3, 0));
+        patternTwo.add(new Coordinates(1, 4));
+        patternTwo.add(new Coordinates(2, 4));
+        patternTwo.add(new Coordinates(3, 4));
 
 
         ArrayList<Coordinates> caseOne = new ArrayList<Coordinates>();
