@@ -139,5 +139,23 @@ public class CustomPatternTest {
             e.printStackTrace();
             Assertions.fail("Test Five Expected To Fail");
         }
+
+        ArrayList<Coordinates> caseSix = new ArrayList<Coordinates>();
+        for(int i = 0; i < 5; i++) {
+            for(int j = 0; j < 5; j++) {
+                if(i != 4 && j != 0) {
+                    caseSix.add(new Coordinates(i, j));
+                }
+            }
+        }
+        BingoCard testCardSix = new BingoCard();
+        testCardSix.setMarkedSpaces(caseSix);
+        boolean testSix = bingoPatternTwo.getBingo(testCardSix);
+        try {
+            Assertions.assertFalse(testSix);
+        }catch(Exception e) {
+            e.printStackTrace();
+            Assertions.fail("Test Six Expected To Fail");
+        }
     }
 }
