@@ -17,6 +17,7 @@ public class CustomPatternTest {
         patternOne.add(new Coordinates(2, 2));
         patternOne.add(new Coordinates(1, 2));
         patternOne.add(new Coordinates(0, 2));
+        bingoPatternOne.insertCustomPattern(patternOne);
 
         CustomPattern bingoPatternTwo = new CustomPattern();
         ArrayList<Coordinates> patternTwo = new ArrayList<Coordinates>();
@@ -36,6 +37,7 @@ public class CustomPatternTest {
         patternTwo.add(new Coordinates(1, 4));
         patternTwo.add(new Coordinates(2, 4));
         patternTwo.add(new Coordinates(3, 4));
+        bingoPatternTwo.insertCustomPattern(patternTwo);
 
 
         ArrayList<Coordinates> caseOne = new ArrayList<Coordinates>();
@@ -60,7 +62,7 @@ public class CustomPatternTest {
 
         ArrayList<Coordinates> caseTwo = new ArrayList<Coordinates>();
         for(int i = 0; i < 5; i++) {
-            for(int j = 0; j < 5; j+) {
+            for(int j = 0; j < 5; j++) {
                 caseTwo.add(new Coordinates(i, j));
             }
         }
@@ -87,7 +89,7 @@ public class CustomPatternTest {
         testCardThree.setMarkedSpaces(caseThree);
         boolean testThree = bingoPatternOne.getBingo(testCardThree);
         try {
-            Assertions.assertFalse(!testThree);
+            Assertions.assertFalse(testThree);
         }catch(Exception e) {
             e.printStackTrace();
             Assertions.fail("Test Three Expected To Fail");
